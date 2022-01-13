@@ -18,6 +18,20 @@ class MapViewController: UIViewController {
         checkLocationPermission()
         addLongGestureRecognizer()
     }
+    
+    // Mark: Create Alert Permisson - Go settings
+    func makeAlert(titleInput:String, messegeInput:String) {
+        let alert = UIAlertController(title: titleInput, message: messegeInput, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "Not now!", style: UIAlertAction.Style.default) { UIAlertAction in}
+        let goSettingsButton = UIAlertAction(title: "Go Settings", style: UIAlertAction.Style.default) {UIAlertAction in
+            if let url = URL(string:UIApplication.openSettingsURLString){
+                UIApplication.shared.open(url)
+            }
+        }
+        alert.addAction(okButton)
+        alert.addAction(goSettingsButton)
+        self.present(alert, animated: true, completion: nil)
+    }
 
     func addLongGestureRecognizer() {
         let longPressGesture = UILongPressGestureRecognizer(target: self,
@@ -42,6 +56,10 @@ class MapViewController: UIViewController {
         case .denied, .restricted:
             //popup gosterecegiz. go to settings butonuna basildiginda
             //kullaniciyi uygulamamizin settings sayfasina gonder
+            
+            // Mark: Call AlertView
+            makeAlert(titleInput: "Error!", messegeInput: "Location permission denied. Do you want to go to settings?")
+            
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
