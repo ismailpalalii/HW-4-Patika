@@ -9,17 +9,17 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
-
+    
     @IBOutlet weak var mapView: MKMapView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         checkLocationPermission()
         addLongGestureRecognizer()
     }
     
-    // Mark: Create Alert Permisson - Go settings
+    // Mark: Create Alert Permisson && Add Go settings Button
     func makeAlert(titleInput:String, messegeInput:String) {
         let alert = UIAlertController(title: titleInput, message: messegeInput, preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "Not now!", style: UIAlertAction.Style.default) { UIAlertAction in}
@@ -32,23 +32,23 @@ class MapViewController: UIViewController {
         alert.addAction(goSettingsButton)
         self.present(alert, animated: true, completion: nil)
     }
-
+    
     func addLongGestureRecognizer() {
         let longPressGesture = UILongPressGestureRecognizer(target: self,
                                                             action: #selector(handleLongPressGesture(_ :)))
         self.view.addGestureRecognizer(longPressGesture)
     }
-
+    
     @objc func handleLongPressGesture(_ sender: UILongPressGestureRecognizer) {
         let point = sender.location(in: mapView)
         let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
-
+        
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = "Pinned"
         mapView.addAnnotation(annotation)
     }
-
+    
     func checkLocationPermission() {
         switch self.locationManager.authorizationStatus {
         case .authorizedAlways, .authorizedWhenInUse, .authorized:
@@ -67,11 +67,11 @@ class MapViewController: UIViewController {
             fatalError()
         }
     }
-
+    
     @IBAction func showCurrentLocationTapped(_ sender: UIButton) {
         locationManager.requestLocation()
     }
-
+    
     private lazy var locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -84,19 +84,19 @@ extension MapViewController: CLLocationManagerDelegate {
         guard let coordinate = locations.first?.coordinate else { return }
         print("latitude: \(coordinate.latitude)")
         print("longitude: \(coordinate.longitude)")
-
+        
         mapView.setCenter(coordinate, animated: true)
     }
-
+    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         checkLocationPermission()
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-
+        
     }
 }
 
 extension MapViewController: MKMapViewDelegate {
-
+    
 }

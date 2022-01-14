@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177E09052792299F00BA7AB9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 177E09042792299F00BA7AB9 /* Settings.bundle */; };
 		23097EC7276F330D00AC8761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23097EC6276F330D00AC8761 /* AppDelegate.swift */; };
 		23097EC9276F330D00AC8761 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23097EC8276F330D00AC8761 /* SceneDelegate.swift */; };
 		23097ECB276F330D00AC8761 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23097ECA276F330D00AC8761 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		177E09042792299F00BA7AB9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		23097EC3276F330D00AC8761 /* UIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23097EC6276F330D00AC8761 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23097EC8276F330D00AC8761 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		23097EBA276F330D00AC8761 = {
 			isa = PBXGroup;
 			children = (
+				177E09042792299F00BA7AB9 /* Settings.bundle */,
 				23097EC5276F330D00AC8761 /* UIComponents */,
 				23097EC4276F330D00AC8761 /* Products */,
 			);
@@ -212,6 +215,7 @@
 			files = (
 				23097ED3276F330F00AC8761 /* LaunchScreen.storyboard in Resources */,
 				23097ED0276F330F00AC8761 /* Assets.xcassets in Resources */,
+				177E09052792299F00BA7AB9 /* Settings.bundle in Resources */,
 				238A3323278986690070B74E /* MyCustomTableViewCell.xib in Resources */,
 				23097ECE276F330D00AC8761 /* Main.storyboard in Resources */,
 			);
