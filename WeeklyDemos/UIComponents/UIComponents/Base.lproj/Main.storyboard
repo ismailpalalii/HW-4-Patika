@@ -538,6 +538,21 @@
                                             <action selector="reloadButtonTapped:" destination="8R7-g3-9b9" id="xfH-1m-Kq8"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="back" image="chevron.backward" catalog="system" width="95" id="8aJ-rY-34h">
+                                        <connections>
+                                            <action selector="reloadButtonTapped:" destination="8R7-g3-9b9" id="CRA-g3-z7l"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="next" image="chevron.forward" catalog="system" width="142" id="Jea-8e-LlU">
+                                        <connections>
+                                            <action selector="reloadButtonTapped:" destination="8R7-g3-9b9" id="o0D-T6-iKr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="next" image="square.and.arrow.up" catalog="system" width="142" id="tpF-0t-Uzr">
+                                        <connections>
+                                            <action selector="reloadButtonTapped:" destination="8R7-g3-9b9" id="oFB-0a-Zq1"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -563,7 +578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bd-lR-N2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3767" y="892"/>
+            <point key="canvasLocation" x="3483" y="892"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="k1m-61-Abu">
@@ -806,7 +821,10 @@
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="bgImage" width="640" height="360"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="location" catalog="system" width="128" height="118"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

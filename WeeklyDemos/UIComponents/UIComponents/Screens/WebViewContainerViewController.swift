@@ -41,6 +41,45 @@ class WebViewContainerViewController: UIViewController {
                             options: .new,
                             context: nil)
         webView.load(urlRequest)
+        
+        // Create Html String
+        let htmlString = """
+            <style>
+            @font-face
+            {
+                font-family: 'Open Sans';
+                font-weight: normal;
+                src: url(OpenSans-Regular.ttf);
+            }
+            @font-face
+            {
+                font-family: 'Open Sans';
+                font-weight: bold;
+                src: url(OpenSans-Bold.ttf);
+            }
+            @font-face
+            {
+                font-family: 'Open Sans';
+                font-weight: 1500;
+                src: url(OpenSans-ExtraBold.ttf);
+            }
+            @font-face
+            {
+                font-family: 'Open Sans';
+                font-weight: 1000;
+                src: url(OpenSans-Light.ttf);
+            }
+            @font-face
+            {
+                font-family: 'Open Sans';
+                font-weight: 1000;
+                src: url(OpenSans-Semibold.ttf);
+            }
+            </style>
+            <span style="font-family: 'Open Sans'; font-weight: bold; font-size: 100; color: red">(Hello World !)</span>
+            """
+            // Call Html String
+            webView.loadHTMLString(htmlString, baseURL: Bundle.main.bundleURL)
     }
 
     func configureActivityIndicator() {
