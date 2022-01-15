@@ -1,11 +1,8 @@
-# HW4
 
-## Ödev 1: 
-Bu hafta geliştirdiğimiz projedeki webView ekranında 
-- toolBar’a goForward, goBackward ve open in safari butonları ve özellikleri eklenecektir.
-- string içerisine yazılmış bir html kodunun gösterilmesi sağlanacaktır.
-- default bulunan font değiştirilerek html’in farklı bir fontta gösterilmesi sağlanacaktır. 
+## Homework 4 for Mobven iOS Bootcamp
 
-## Ödev 2: 
-Bu hafta geliştirdiğimiz projedeki mapView ekranında
-- locationAuthorization denied veya restricted ise kullanıcıya extension ile yazılmış bir alertView gösterilecektir. alertView’da cancel ve go to settings butonları bulunacaktır. go to settings butonuna basıldığında kullanıcı geliştirdiğimiz uygulama ayarları ekranına yönlendirilecektir.
+### In this homework, we learned how to use Mapkit and Webview.
+
+### - Screenshots
+
+<img src="https://user-images.githubusercontent.com/72145206/149594443-769853e3-08a6-4de0-b6a6-b225deed731e.png" width="200">          <img src="https://user-images.githubusercontent.com/72145206/149594447-3fa2112f-ac9e-4332-a961-2f2531988c6b.png" width="200">
